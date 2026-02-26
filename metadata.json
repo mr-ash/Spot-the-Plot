@@ -1,0 +1,8 @@
+{
+  "name": "Spot-to-Plot",
+  "description": "A community tool for residents to identify, discuss, and transform neglected urban spaces into vibrant micro-plots.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}
