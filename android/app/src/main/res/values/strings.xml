@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Spot-to-Plot</string>
+    <string name="title_activity_main">Spot-to-Plot</string>
+    <string name="package_name">com.mrash.spottoplot</string>
+    <string name="custom_url_scheme">com.mrash.spottoplot</string>
+</resources>
