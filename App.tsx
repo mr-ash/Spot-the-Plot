@@ -1315,12 +1315,12 @@ export default function App() {
               <button
                 onClick={handleMarkCompleted}
                 aria-label="Project Completed"
-                className="group mr-0.5 h-10 w-10 hover:w-44 rounded-xl bg-emerald-600 text-white border-2 border-white shadow-[0_6px_20px_rgba(5,150,105,0.35)] transition-all duration-300 overflow-hidden flex items-center justify-start"
+                className="group mr-0.5 h-10 w-10 hover:w-44 rounded-xl bg-emerald-600 text-white border-2 border-white shadow-[0_6px_20px_rgba(5,150,105,0.35)] transition-all duration-300 overflow-hidden flex items-center"
               >
                 <span className="w-10 h-10 shrink-0 flex items-center justify-center">
                   <CheckCircle size={18} />
                 </span>
-                <span className="pr-3 text-[11px] font-black uppercase tracking-wider whitespace-nowrap opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-white">
+                <span className="h-10 flex items-center pr-3 text-[11px] leading-none font-black uppercase tracking-wider whitespace-nowrap opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-white">
                   Project Completed
                 </span>
               </button>
