@@ -1311,17 +1311,17 @@ export default function App() {
           <img src={activePlot.imageUrl} alt="Plot" className={`w-full h-full object-cover opacity-90 ${activePlot.status === PlotStatus.COMPLETED ? 'grayscale-[50%]' : ''}`} />
           <div className="absolute top-0 left-0 w-full p-4 flex justify-between items-start bg-gradient-to-b from-black/60 to-transparent z-20">
             <button onClick={() => setView('FEED')} className="text-white p-2 rounded-xl bg-black/20 backdrop-blur"><ChevronLeft size={24} /></button>
-            {isOwner && activePlot.status !== PlotStatus.COMPLETED && (
+            {activePlot.status !== PlotStatus.COMPLETED && (
               <button
                 onClick={handleMarkCompleted}
                 aria-label="Project Completed"
-                className="group mr-0.5 h-10 w-10 hover:w-44 rounded-xl bg-emerald-600 text-white border-2 border-white shadow-[0_6px_20px_rgba(5,150,105,0.35)] transition-all duration-300 overflow-hidden flex items-center"
+                className="group mr-0.5 h-10 w-10 hover:w-60 rounded-xl bg-emerald-600 text-white border-2 border-white shadow-[0_6px_20px_rgba(5,150,105,0.35)] transition-all duration-300 overflow-hidden"
               >
-                <span className="w-10 h-10 shrink-0 flex items-center justify-center">
-                  <CheckCircle size={18} />
-                </span>
-                <span className="h-10 flex items-center pr-3 text-[11px] leading-none font-black uppercase tracking-wider whitespace-nowrap opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-white">
-                  Project Completed
+                <span className="h-full w-full flex items-center justify-center gap-2.5 px-3">
+                  <CheckCircle size={20} className="shrink-0" />
+                  <span className="text-[13px] leading-none font-black uppercase tracking-[0.08em] whitespace-nowrap opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-[190px] transition-all duration-300 text-white">
+                    Project Complete
+                  </span>
                 </span>
               </button>
             )}
