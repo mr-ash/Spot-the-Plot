@@ -1311,6 +1311,14 @@ export default function App() {
           <img src={activePlot.imageUrl} alt="Plot" className={`w-full h-full object-cover opacity-90 ${activePlot.status === PlotStatus.COMPLETED ? 'grayscale-[50%]' : ''}`} />
           <div className="absolute top-0 left-0 w-full p-4 flex justify-between items-start bg-gradient-to-b from-black/60 to-transparent z-20">
             <button onClick={() => setView('FEED')} className="text-white p-2 rounded-xl bg-black/20 backdrop-blur"><ChevronLeft size={24} /></button>
+            {isOwner && activePlot.status !== PlotStatus.COMPLETED && (
+              <button
+                onClick={handleMarkCompleted}
+                className="px-3 py-2 rounded-xl bg-white/85 text-gray-800 border border-white/60 backdrop-blur font-bold text-xs uppercase tracking-wider shadow-sm hover:bg-white"
+              >
+                Project Completed
+              </button>
+            )}
           </div>
           {activePlot.status === PlotStatus.COMPLETED && (
             <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-[2px] z-10">
@@ -1408,9 +1416,6 @@ export default function App() {
               </div>
             )}
 
-            {isOwner && activePlot.status !== PlotStatus.COMPLETED && (
-              <Button onClick={handleMarkCompleted} className="w-full bg-blue-600 hover:bg-blue-700 font-black tracking-widest py-4"><CheckCircle size={20} /> Project Completed</Button>
-            )}
           </div>
 
           <div className="p-6">
